@@ -34,6 +34,8 @@ public class SMSServiceImpl extends RemoteServiceServlet implements SMSService {
 		Message message = new Message();
 		message.setPerson(person);
 		message.setMessage(strMessage);
+		message.setIncoming(Boolean.FALSE);
+		
 		sendSMS(message);
 	}
 
