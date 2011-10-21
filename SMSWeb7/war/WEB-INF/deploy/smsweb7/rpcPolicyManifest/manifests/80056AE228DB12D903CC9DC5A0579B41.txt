@@ -1,0 +1,2 @@
+serviceClass: aburakc.client.GreetingService
+path: 696558E7ECDC12A139763A54C914C16C.gwt.rpc
