@@ -4,6 +4,9 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.DockLayoutPanel;
+import com.google.gwt.dom.client.Style.Unit;
 
 public class SMSList implements EntryPoint {
 	/**
@@ -14,9 +17,17 @@ public class SMSList implements EntryPoint {
 	
 	public void onModuleLoad() {
 		RootPanel rootPanel = RootPanel.get();
+		rootPanel.setSize("100%", "100%");
+		
+		DockLayoutPanel dockLayoutPanel = new DockLayoutPanel(Unit.EM);
+		rootPanel.add(dockLayoutPanel, 10, 10);
+		dockLayoutPanel.setSize("100%", "100%");
+		
+		Button btnAaa = new Button("aaa");
+		dockLayoutPanel.addWest(btnAaa, 7.7);
 		
 		Button btnRefresh = new Button("Refresh");
-		rootPanel.add(btnRefresh, 82, 36);
+		dockLayoutPanel.add(btnRefresh);
 		
 		
 	}
