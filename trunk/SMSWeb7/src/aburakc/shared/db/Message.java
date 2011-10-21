@@ -18,6 +18,8 @@ public class Message {
 	@OneToOne
 	private Person person;
 
+	private Boolean incoming;
+	
 	public Long getId() {
 		return id;
 	}
@@ -40,5 +42,13 @@ public class Message {
 
 	public void setPerson(Person person) {
 		this.person = person;
+	}
+
+	public Boolean getIncoming() {
+		return incoming;
+	}
+
+	public void setIncoming(Boolean incoming) {
+		this.incoming = incoming;
 	}
 }
